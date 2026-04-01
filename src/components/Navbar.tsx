@@ -3,10 +3,18 @@
 import { useState, useEffect } from "react";
 
 const Logo = () => (
-  <svg width="160" height="44" viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="18" width="8" height="8" fill="#C0622A" transform="rotate(45 4 22)" />
-    <text x="18" y="20" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="16" fill="#C0622A" letterSpacing="1">CREATOF</text>
-    <text x="18" y="36" fontFamily="Inter, sans-serif" fontWeight="400" fontSize="11" fill="#FFFFFF" letterSpacing="3">REALISATIE</text>
+  <svg width="260" height="60" viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Decorative vertical line */}
+    <line x1="0" y1="6" x2="0" y2="54" stroke="#C0622A" strokeWidth="2.5" strokeLinecap="round" />
+    {/* Diamond accent */}
+    <rect x="4" y="27" width="8" height="8" fill="#C0622A" transform="rotate(45 8 31)" />
+    {/* Connector line */}
+    <line x1="18" y1="31" x2="28" y2="31" stroke="#C0622A" strokeWidth="1" opacity="0.4" />
+    {/* CREATOF REALISATIE — main company name, dominant */}
+    <text x="32" y="30" fontFamily="Inter, sans-serif" fontWeight="900" fontSize="26" fill="#C0622A" letterSpacing="1.5">CREATOF</text>
+    <text x="32" y="52" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="12" fill="#E5E5E5" letterSpacing="5.5">REALISATIE</text>
+    {/* Subtle underline accent */}
+    <line x1="32" y1="57" x2="248" y2="57" stroke="#C0622A" strokeWidth="0.6" opacity="0.25" />
   </svg>
 );
 
@@ -34,7 +42,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex-shrink-0">
             <Logo />

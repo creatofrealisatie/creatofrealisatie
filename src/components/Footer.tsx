@@ -34,7 +34,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-6">
               <a
-                href="https://instagram.com/creatofrealisatie"
+                href="https://www.instagram.com/creatofrealisatie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-primary/20 hover:text-primary text-gray-400 flex items-center justify-center transition-all duration-200"
@@ -77,24 +77,21 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+31612345678" className="text-gray-500 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-2">
+                <a href="tel:0684643596" className="text-gray-500 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-2">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 3.5A1.5 1.5 0 013.5 2h1.21a.75.75 0 01.71.512l.9 2.7a.75.75 0 01-.206.791L5.25 6.75a8.288 8.288 0 003.712 3.713l.748-1.866a.75.75 0 01.791-.206l2.7.9A.75.75 0 0113 10V11.5A1.5 1.5 0 0111.5 13C5.701 13 1 8.299 1 2.5" stroke="currentColor" strokeWidth="1.2" />
                   </svg>
-                  +31 (0)6 12345678
+                  06 84 64 35 96
                 </a>
               </li>
               <li>
-                <a href="mailto:info@creatofrealisatie.nl" className="text-gray-500 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-2">
+                <a href="mailto:creatofrealisatie@gmail.com" className="text-gray-500 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-2">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <rect x="1" y="3" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
                     <path d="M1 5l6 4 6-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                   </svg>
-                  info@creatofrealisatie.nl
+                  creatofrealisatie@gmail.com
                 </a>
-              </li>
-              <li className="text-gray-500 text-sm">
-                KvK: 12345678
               </li>
             </ul>
           </div>

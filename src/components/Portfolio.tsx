@@ -1,10 +1,42 @@
+import Image from "next/image";
+
 const portfolioItems = [
-  { id: 1, title: "Moderne Badkamer", category: "Badkamer", color: "#1E1E1E" },
-  { id: 2, title: "Strakke Keuken", category: "Keuken", color: "#1C1A18" },
-  { id: 3, title: "Walk-in Closet", category: "Maatmeubels", color: "#1A1C1E" },
-  { id: 4, title: "Luxe Badkamer Suite", category: "Badkamer", color: "#1E1C1A" },
-  { id: 5, title: "Open Keuken Eiland", category: "Keuken", color: "#181E1C" },
-  { id: 6, title: "Inbouwkasten", category: "Maatmeubels", color: "#1C1E18" },
+  {
+    id: 1,
+    title: "Moderne Badkamer",
+    category: "Badkamer",
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80&fit=crop",
+  },
+  {
+    id: 2,
+    title: "Strakke Eilandkeuken",
+    category: "Keuken",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&fit=crop",
+  },
+  {
+    id: 3,
+    title: "Walk-in Closet",
+    category: "Maatmeubels",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop",
+  },
+  {
+    id: 4,
+    title: "Luxe Badkamer Suite",
+    category: "Badkamer",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&fit=crop",
+  },
+  {
+    id: 5,
+    title: "Open Keuken Design",
+    category: "Keuken",
+    image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80&fit=crop",
+  },
+  {
+    id: 6,
+    title: "Inbouwkasten op Maat",
+    category: "Maatmeubels",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&fit=crop",
+  },
 ];
 
 const categoryColor: Record<string, string> = {
@@ -37,33 +69,32 @@ export default function Portfolio() {
             <div
               key={item.id}
               className="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer"
-              style={{ backgroundColor: item.color }}
             >
-              {/* Placeholder visual */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" opacity={0.2}>
-                  <rect x="4" y="4" width="40" height="40" rx="4" stroke="white" strokeWidth="2" />
-                  <circle cx="16" cy="16" r="5" stroke="white" strokeWidth="2" />
-                  <path d="M4 32l10-10 8 8 6-6 16 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className="text-white/20 text-sm font-medium">Foto volgt</span>
-              </div>
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
 
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Category badge */}
               <div
-                className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white"
-                style={{ backgroundColor: categoryColor[item.category] + "99" }}
+                className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white backdrop-blur-sm"
+                style={{ backgroundColor: categoryColor[item.category] + "CC" }}
               >
                 {item.category}
               </div>
 
-              {/* Title on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <h3 className="text-white font-bold text-lg">{item.title}</h3>
-                <p className="text-gray-300 text-sm mt-1">Bekijk project →</p>
+              {/* Title — always visible at bottom, more prominent on hover */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white font-bold text-lg drop-shadow">{item.title}</h3>
+                <p className="text-gray-300 text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Bekijk project →
+                </p>
               </div>
             </div>
           ))}
@@ -71,7 +102,6 @@ export default function Portfolio() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <p className="text-gray-500 text-sm mb-4">Wilt u uw eigen foto&apos;s zien? Plaats ze in <code className="text-primary">/public/images/portfolio/</code></p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 border border-primary/40 hover:bg-primary/10 text-primary font-semibold px-8 py-3 rounded transition-all duration-200"

@@ -15,12 +15,6 @@ const EmailIcon = () => (
   </svg>
 );
 
-const KvKIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <rect x="2" y="3" width="16" height="14" rx="2" stroke="#C0622A" strokeWidth="1.5" />
-    <path d="M6 8h8M6 11h5" stroke="#C0622A" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-);
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -67,9 +61,8 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-white mb-6">Contactgegevens</h3>
               <div className="space-y-5">
                 {[
-                  { icon: <PhoneIcon />, label: "Telefoon", value: "+31 (0)6 12345678" },
-                  { icon: <EmailIcon />, label: "E-mail", value: "info@creatofrealisatie.nl" },
-                  { icon: <KvKIcon />, label: "KvK", value: "12345678" },
+                  { icon: <PhoneIcon />, label: "Telefoon", value: "06 84 64 35 96" },
+                  { icon: <EmailIcon />, label: "E-mail", value: "creatofrealisatie@gmail.com" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

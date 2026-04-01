@@ -1,80 +1,72 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-[#111111]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#111111] via-[#1A1A1A] to-[#111111]" />
-        {/* Terracotta glow */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=85&fit=crop"
+          alt="Luxe gerenoveerde badkamer"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
         />
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#111111]/95 via-[#111111]/80 to-[#111111]/50" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#111111] to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-8">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Meer dan 15 jaar vakmanschap
-        </div>
+      {/* Terracotta glow accents */}
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Main headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-          Uw woning,{" "}
-          <span className="text-primary">
-            onze
-            <br />
-            vakmanschap
-          </span>
-        </h1>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-2xl">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-8">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            Meer dan 15 jaar vakmanschap
+          </div>
 
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Badkamerrenovaties, keukens en maatmeubels op maat — uitgevoerd met
-          precisie en oog voor detail.
-        </p>
+          {/* Main headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            Uw woning,{" "}
+            <span className="text-primary">
+              onze
+              <br />
+              vakmanschap
+            </span>
+          </h1>
 
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#contact"
-            className="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded text-base transition-all duration-200 hover:scale-105 shadow-lg shadow-primary/20"
-          >
-            Vraag offerte aan
-          </a>
-          <a
-            href="#portfolio"
-            className="border border-white/20 hover:border-primary/50 text-white hover:text-primary font-semibold px-8 py-4 rounded text-base transition-all duration-200"
-          >
-            Bekijk ons werk →
-          </a>
-        </div>
+          {/* Subheadline */}
+          <p className="text-lg sm:text-xl text-gray-300 max-w-xl mb-10 leading-relaxed">
+            Badkamerrenovaties, keukens en maatmeubels op maat — uitgevoerd met
+            precisie en oog voor detail.
+          </p>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto">
-          {[
-            { value: "500+", label: "Projecten" },
-            { value: "15+", label: "Jaar ervaring" },
-            { value: "100%", label: "Tevredenheid" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
-              <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-            </div>
-          ))}
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <a
+              href="#contact"
+              className="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded text-base transition-all duration-200 hover:scale-105 shadow-lg shadow-primary/20"
+            >
+              Vraag offerte aan
+            </a>
+            <a
+              href="#portfolio"
+              className="border border-white/30 hover:border-primary/50 text-white hover:text-primary font-semibold px-8 py-4 rounded text-base transition-all duration-200"
+            >
+              Bekijk ons werk →
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600">
-        <span className="text-xs">Scroll</span>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500">
+        <span className="text-xs tracking-widest uppercase">Scroll</span>
         <svg
           width="16"
           height="24"
