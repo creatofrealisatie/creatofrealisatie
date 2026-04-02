@@ -1,41 +1,62 @@
 import Image from "next/image";
 
 const portfolioItems = [
+  // Badkamer
   {
     id: 1,
-    title: "Moderne Badkamer",
+    title: "Inloopdouche Renovatie",
     category: "Badkamer",
     image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80&fit=crop",
   },
   {
     id: 2,
-    title: "Strakke Eilandkeuken",
-    category: "Keuken",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Walk-in Closet",
-    category: "Maatmeubels",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop",
-  },
-  {
-    id: 4,
     title: "Luxe Badkamer Suite",
     category: "Badkamer",
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&fit=crop",
   },
   {
+    id: 3,
+    title: "Vrijstaand Bad & Tegels",
+    category: "Badkamer",
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80&fit=crop",
+  },
+  // Keuken
+  {
+    id: 4,
+    title: "Strakke Eilandkeuken",
+    category: "Keuken",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&fit=crop",
+  },
+  {
     id: 5,
-    title: "Open Keuken Design",
+    title: "Open Keuken met Barblad",
     category: "Keuken",
     image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80&fit=crop",
   },
   {
     id: 6,
-    title: "Inbouwkasten op Maat",
+    title: "Moderne Keuken Renovatie",
+    category: "Keuken",
+    image: "https://images.unsplash.com/photo-1600489000022-d3c7cc4c41f2?w=800&q=80&fit=crop",
+  },
+  // Maatmeubels
+  {
+    id: 7,
+    title: "Walk-in Closet op Maat",
+    category: "Maatmeubels",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop",
+  },
+  {
+    id: 8,
+    title: "Ingebouwde Wandkasten",
     category: "Maatmeubels",
     image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&fit=crop",
+  },
+  {
+    id: 9,
+    title: "Slaapkamer Maatkasten",
+    category: "Maatmeubels",
+    image: "https://images.unsplash.com/photo-1616627561859-9d412cf5f8f7?w=800&q=80&fit=crop",
   },
 ];
 
